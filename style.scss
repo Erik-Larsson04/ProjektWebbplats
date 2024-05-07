@@ -1,0 +1,117 @@
+html {
+    font-size: 16px;
+}
+html, body{min-height:100%;}
+body{height:100vh;}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+#aboutme, #index, #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #wrapper {
+        header, footer {
+            padding-top: 20px;
+            padding-bottom:20px;
+            width:100%;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        nav {
+            ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    background-color: lightgray;
+
+
+                    a {
+                        display: block;                        
+                        padding:15px;
+                        padding-left:25px;
+                        padding-right:25px;
+                        transition: color 1s;
+
+                        &:hover {
+                            background-color: lightblue;
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+            h2 {
+                font-size: 24px;
+                color: #333;
+            }
+
+            img {
+                max-width: 300px;
+                display:block;
+                margin:0 auto;
+                border:5px solid lightgray;
+                margin-bottom:20px;
+            }
+
+            article {
+                margin-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 20px;
+                color: #666;
+                max-width: 500px;
+                h2{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#aboutme, #index {
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; 
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #aboutme, #index, #projects {
+        #wrapper {
+            main {
+                padding: 10px;
+
+                article {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
